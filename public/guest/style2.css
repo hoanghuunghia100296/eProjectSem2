@@ -1,0 +1,94 @@
+.add-to-cart-btn {
+    position: relative;
+    outline: 0;
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    cursor: pointer
+    
+}
+.add-to-cart-btn .fa-shopping-cart {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -20%;
+    font-size: 1.8em;
+    transform: translate(-50%, -50%)
+}
+.add-to-cart-btn .fa-square {
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: 53%;
+    font-size: 0.8em;
+    transform: translate(-50%, -50%)
+}
+.add-to-cart-btn .added {
+    display: none;
+}
+.add-to-cart-btn.clicked .span-add-to-cart { 
+    display: none;
+}
+.add-to-cart-btn.clicked .fa-shopping-cart {
+    animation: cart 2s ease-in forwards
+}
+
+.add-to-cart-btn.clicked .fa-square {
+    animation: box 2s ease-in forwards
+}
+
+.add-to-cart-btn.clicked span.add-to-cart {
+    animation: addcart 2s ease-in forwards
+}
+
+.add-to-cart-btn.clicked span.added {
+    display: block;
+    animation: added 1.5s ease-in forwards
+}
+
+@keyframes cart {
+    0% {
+        left: -10%
+    }
+
+    40%,
+    60% {
+        left: 50%
+    }
+
+    100% {
+        left: 110%
+    }
+}
+
+@keyframes box {
+
+    0%,
+    40% {
+        top: -20%
+    }
+
+    60% {
+        top: 36%;
+        left: 53%
+    }
+
+    100% {
+        top: 40%;
+        left: 112%
+    }
+}
+
+
+
+@keyframes added {
+
+    0%,
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
